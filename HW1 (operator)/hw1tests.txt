@@ -1,0 +1,38 @@
+		Operator rootOperator = new Operator(OperatorType.Multiply, new Operator(-2), new Operator(0.5), 0);
+		// expected output: "NaN" (undefined result)
+		System.out.println(rootOperator);
+		System.out.println();
+
+		Operator rootOperator2 = new Operator(OperatorType.Divide, new Operator(5), new Operator(0), 0);
+		// expected output: "Infinity" or "-Infinity" depending on the sign of the
+		// numerator
+		System.out.println(rootOperator2);
+		System.out.println();
+
+		Operator rootOperator3 = new Operator(OperatorType.Multiply, new Operator(2), new Operator(Double.MAX_VALUE),
+				0);
+		// expected output: "Infinity"
+		System.out.println(rootOperator3);
+		System.out.println();
+
+		Operator rootOperator4 = new Operator(OperatorType.Divide, new Operator(Double.MIN_VALUE),
+				new Operator(Double.MIN_VALUE), 0);
+		// expected output: "1.0"
+		System.out.println(rootOperator4);
+		System.out.println();
+
+		
+
+		Operator rootOperator5 = new Operator(OperatorType.Divide, largeTree, new Operator(10), 0);
+		// expected output: depends on the specific expression, but should not cause any
+		// memory or stack overflow issues.
+		System.out.println(rootOperator5);
+		System.out.println();
+
+		
+
+		Operator rootOperator7 = new Operator(OperatorType.Divide, new Operator(1), new Operator(Double.MIN_VALUE), 0);
+		// expected output: "0.0" or "Infinity" depending on the programming language
+		// used.
+		System.out.println(rootOperator7);
+		System.out.println();
